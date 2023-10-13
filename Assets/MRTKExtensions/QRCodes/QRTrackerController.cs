@@ -14,9 +14,20 @@ namespace MRTKExtensions.QRCodes
         private string locationQrValue = string.Empty;
 
         private Transform markerHolder;
-        private AudioSource audioSource;
+        //private AudioSource audioSource;
         private GameObject markerDisplay;
         private QRInfo lastMessage;
+        //make points
+        public static int Counting = 0;
+       
+
+        public void CheckingPoints()
+        {
+            //make points instantiate and if points are more than 3points, then calculate the best position
+            Counting++;
+            Debug.Log($"{Counting}");
+            
+        }
    
         public bool IsTrackingActive { get; private set; } = true;
 
@@ -38,12 +49,14 @@ namespace MRTKExtensions.QRCodes
             {
                 return;
             }
-
+            //markerHolder = position of QR code
             markerHolder = spatialGraphCoordinateSystemSetter.gameObject.transform;
-            markerDisplay = markerHolder.GetChild(0).gameObject;
-            markerDisplay.SetActive(false);
 
-            audioSource = markerHolder.gameObject.GetComponent<AudioSource>();
+            //markerDisplay is below of QR object
+            markerDisplay = markerHolder.GetChild(0).gameObject;
+            //markerDisplay.SetActive(false);
+
+            //audioSource = markerHolder.gameObject.GetComponent<AudioSource>();
 
             QRCodeTrackingService.QRCodeFound += ProcessTrackingFound;
             spatialGraphCoordinateSystemSetter.PositionAcquired += SetPosition;
@@ -73,10 +86,21 @@ namespace MRTKExtensions.QRCodes
 
         public void ResetTracking()
         {
+            
             if (QRCodeTrackingService.IsInitialized)
             {
                 markerDisplay.SetActive(false);
+
+     
                 IsTrackingActive = true;
+
+                if (Counting >= 4)
+                {
+                    IsTrackingActive = false;
+                    markerDisplay.SetActive(false);
+                }
+
+
             }
         }
 
@@ -102,7 +126,7 @@ namespace MRTKExtensions.QRCodes
             markerHolder.localScale = Vector3.one * lastMessage.PhysicalSideLength;
             markerDisplay.SetActive(true);
             PositionSet?.Invoke(this, pose);
-            audioSource.Play();
+            //audioSource.Play();
         }
 
         public EventHandler<Pose> PositionSet;

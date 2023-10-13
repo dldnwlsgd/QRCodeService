@@ -146,7 +146,7 @@ namespace MRTKExtensions.QRCodes
             {
                 return;
             }
-            Debug.Log(msg);
+            //Debug.Log(msg);
             messageList.Add(msg);
             if (messageList.Count > profile.DebugMessages)
             {
