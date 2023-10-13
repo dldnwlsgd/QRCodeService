@@ -94,7 +94,7 @@ namespace MRTKExtensions.QRCodes
      
                 IsTrackingActive = true;
 
-                if (Counting >= 4)
+                if (Counting >= 3)
                 {
                     IsTrackingActive = false;
                     markerDisplay.SetActive(false);
