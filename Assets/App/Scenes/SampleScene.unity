@@ -1324,7 +1324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.029}
+  m_AnchoredPosition: {x: 0, y: 0.084}
   m_SizeDelta: {x: 30, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701877657
@@ -2193,6 +2193,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 727348919}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &785025097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2870926216202133872, guid: 882e525521c52cb4ab9230fe77b5cd72,
+    type: 3}
+  m_PrefabInstance: {fileID: 499462602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &874928826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,7 +2419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9205e8b09d6a76940bc6ad36b0089b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albedoSlider: {fileID: 1750543766}
+  albedoSlider: {fileID: 785025097}
   childrenderers: []
 --- !u!1001 &887469116
 PrefabInstance:
@@ -3040,6 +3046,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIBackplate
       objectReference: {fileID: 0}
+    - target: {fileID: 4125495309553998321, guid: c2f49d0d909d3fc4bbc20d1cb743ab1d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4205010513405509735, guid: c2f49d0d909d3fc4bbc20d1cb743ab1d,
         type: 3}
       propertyPath: m_RootOrder
@@ -3210,7 +3221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1420466700
 Transform:
   m_ObjectHideFlags: 0
@@ -3433,23 +3444,11 @@ MonoBehaviour:
   point: {fileID: 7441753777848235003, guid: 49cbbe7c544476547be80db9c1fe7e79, type: 3}
   jet: {fileID: 369151062}
   UIObj: {fileID: 727348920}
---- !u!1 &1686410421 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5908209549497931938, guid: 882e525521c52cb4ab9230fe77b5cd72,
-    type: 3}
-  m_PrefabInstance: {fileID: 887469116}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1686410422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5908209549497931936, guid: 882e525521c52cb4ab9230fe77b5cd72,
     type: 3}
   m_PrefabInstance: {fileID: 887469116}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1750543766 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5908209549497931938, guid: 882e525521c52cb4ab9230fe77b5cd72,
-    type: 3}
-  m_PrefabInstance: {fileID: 499462602}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1750543767 stripped
 Transform:
@@ -4255,7 +4254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9205e8b09d6a76940bc6ad36b0089b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  albedoSlider: {fileID: 1686410421}
+  albedoSlider: {fileID: 2010761196}
   childrenderers: []
 --- !u!1001 &2001252407
 PrefabInstance:
@@ -4331,6 +4330,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2870926216202133872, guid: 882e525521c52cb4ab9230fe77b5cd72,
     type: 3}
   m_PrefabInstance: {fileID: 146723996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2010761196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2870926216202133872, guid: 882e525521c52cb4ab9230fe77b5cd72,
+    type: 3}
+  m_PrefabInstance: {fileID: 887469116}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2047760285
 GameObject:
@@ -10344,7 +10349,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 6361024386205226789}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
@@ -10356,7 +10361,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
     onExited:
       m_PersistentCalls:
@@ -10371,7 +10376,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 6361024386205226789}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
@@ -10383,7 +10388,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
   <OnClicked>k__BackingField:
     m_PersistentCalls:
@@ -12449,7 +12454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6017311170929638829
 MonoBehaviour:
   m_ObjectHideFlags: 0
