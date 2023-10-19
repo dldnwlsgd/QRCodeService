@@ -21,13 +21,14 @@ namespace MRTKExtensions.QRCodes
         public static int Counting = 0;
        
 
-        public void CheckingPoints()
+        /*public void CheckingPoints()
         {
             //make points instantiate and if points are more than 3points, then calculate the best position
             Counting++;
             Debug.Log($"{Counting}");
             
         }
+        */
    
         public bool IsTrackingActive { get; private set; } = true;
 

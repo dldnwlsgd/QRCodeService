@@ -6,7 +6,7 @@ public class JetController : MonoBehaviour
 {
     [SerializeField]
     private QRTrackerController trackerController;
-    public static Tuple<float, float, float>[] pointPosition = new Tuple<float, float, float>[2];
+    public static Tuple<float, float, float>[] pointPosition = new Tuple<float, float, float>[3];
     
 
     Transform newSet;
@@ -37,8 +37,8 @@ public class JetController : MonoBehaviour
 
         newSet = jet;
 
-        newPointPosition = jet.position + jet.right *0.5f;       
-        pointPosition[QRTrackerController.Counting-1] = new Tuple<float, float, float>(newPointPosition.x, newPointPosition.y, newPointPosition.z);
+        newPointPosition = jet.position + jet.right *0.3f;       
+        pointPosition[QRTrackerController.Counting] = new Tuple<float, float, float>(newPointPosition.x, newPointPosition.y, newPointPosition.z);
 
        
 
@@ -54,5 +54,11 @@ public class JetController : MonoBehaviour
     {
 
         GameObject Point = Instantiate(point, newPointPosition, newSet.rotation);
+
+        Debug.Log(pointPosition[QRTrackerController.Counting]);
+        Debug.Log(QRTrackerController.Counting);
+        QRTrackerController.Counting++;
+        
+
     }
 }
